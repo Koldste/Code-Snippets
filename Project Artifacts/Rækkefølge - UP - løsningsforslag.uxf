@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>168</x>
+      <y>336</y>
+      <w>147</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Medarbejder-Opgave-Mål tabel </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>329</x>
+      <y>336</y>
+      <w>70</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Workflow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>497</x>
+      <y>336</y>
+      <w>70</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Systemvision</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>413</x>
+      <y>336</y>
+      <w>70</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Mock-ups</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>280</x>
+      <y>518</y>
+      <w>91</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Use Case Diagram</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>378</x>
+      <y>518</y>
+      <w>84</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Use case - briefs</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>693</x>
+      <y>525</y>
+      <w>112</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Use case - fully dressed</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>462</x>
+      <y>518</y>
+      <w>133</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Use case - prioriteringstabel</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>714</x>
+      <y>616</y>
+      <w>77</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Domænemodel</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>497</x>
+      <y>616</y>
+      <w>203</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>kandidat til klasse - vurderingstabel</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>966</x>
+      <y>525</y>
+      <w>133</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Systemsekvensdiagram</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1113</x>
+      <y>525</y>
+      <w>105</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Operationskontrakt</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1302</x>
+      <y>525</y>
+      <w>105</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Interaktionsdiagram</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1414</x>
+      <y>525</y>
+      <w>112</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Designklassediagram</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>182</x>
+      <y>266</y>
+      <w>126</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>IT-forundersøgelse
+type=receiver
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1288</x>
+      <y>476</y>
+      <w>126</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Design
+type=receiver
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1533</x>
+      <y>476</y>
+      <w>126</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Implementering
+type=receiver
+fg=dark_gray
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>476</x>
+      <y>469</y>
+      <w>126</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Funktionelle krav
+type=receiver
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>476</x>
+      <y>385</y>
+      <w>126</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Ikke-funktionelle krav
+type=receiver
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1022</x>
+      <y>476</y>
+      <w>126</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Analyse
+type=receiver
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>497</x>
+      <y>567</y>
+      <w>126</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Informationskrav
+type=receiver
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>210</x>
+      <y>133</y>
+      <w>70</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Inception
+type=sender
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>679</x>
+      <y>133</y>
+      <w>70</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Elaboration
+type=sender
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1694</x>
+      <y>98</y>
+      <w>70</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Construction
+type=sender
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>210</x>
+      <y>203</y>
+      <w>70</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>Business case</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>504</x>
+      <y>427</y>
+      <w>98</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>punktopstillet liste</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>574</x>
+      <y>98</y>
+      <w>21</w>
+      <h>840</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;1180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>609</x>
+      <y>539</y>
+      <w>126</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;110.0;158.0;18.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>280</x>
+      <y>357</y>
+      <w>728</w>
+      <h>329</h>
+    </coordinates>
+    <panel_attributes>lt=.
+Kravspecifikation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+fg=red
+bg=none</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>798</x>
+      <y>532</y>
+      <w>182</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>240.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1666</x>
+      <y>91</y>
+      <w>21</w>
+      <h>819</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;1150.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>672</x>
+      <y>399</y>
+      <w>1043</w>
+      <h>245</h>
+    </coordinates>
+    <panel_attributes>lt=.
+Use case realisering
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+fg=red
+bg=none</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1295</x>
+      <y>385</y>
+      <w>455</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+REPEAT </panel_attributes>
+    <additional_attributes>630.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+</diagram>

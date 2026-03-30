@@ -1,0 +1,25 @@
+{
+  "profiles": {
+    "ProjectX": {
+      "commandName": "Project",
+      "commandLineArgs": "watch run",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:54487;http://localhost:54488"
+    },
+    "Watch": {
+      "commandName": "Project",
+      "executablePath": "dotnet",
+      "commandLineArgs": "watch run --verbose",
+      "workingDirectory": "$(ProjectDir)",
+      "launchBrowser": true,
+      "launchUrl": "https://localhost:54487/",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:54487;http://localhost:54488",
+      "sqlDebugging": true
+    }
+  }
+}
