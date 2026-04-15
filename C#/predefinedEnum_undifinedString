@@ -1,0 +1,52 @@
+The API usually returns a predefined <see cref="Type"/>, but might return an undifined <see cref="Type"/> in the future.
+This solves that problem, but still allows one to set a predefined <see cref="Type"/> when sending a request.
+
+
+public class Organisation
+{
+    #region Type
+    /// The API usually returns a predefined <see cref="Type"/>, but might return an undifined <see cref="Type"/> in the future.
+    /// This solves that problem, but still allows one to set a predefined <see cref="Type"/> when sending a request.
+
+        /// <summary>
+        ///     Sets the type of the organization, before sending a request to the API.
+        /// </summary>
+        /// <remarks>
+        ///     Use only when sending a request to the API. The value is used to set the string <see cref="Type"/> property, which is used in the request.
+        ///     The API usually returns a predefined <see cref="Type"/>, but might return an undifined <see cref="Type"/> in the future.
+        ///     This solves that problem, but still allows one to set a predefined <see cref="Type"/> when sending a request.
+        /// </remarks>
+        [JsonIgnore]
+        public required Enhedstyper Enhedstype
+        {
+            set => Type = value.GetEnumMemberValue();
+        }
+
+        /// <summary>
+        ///     Gets the type of the organization, returned by the API.
+        /// </summary>
+        /// <remarks>
+        ///     Do not use when sending a request to the API.
+        ///     The API usually returns a predefined <see cref="Type"/>, but might return an undifined <see cref="Type"/> in the future.
+        ///     This solves that problem, but still allows one to set a predefined <see cref="Type"/> when sending a request.
+        /// </remarks>
+        [JsonRequired]
+        [JsonProperty(nameof(Type))]
+        public string Type { get; /*private*/ set; } = null!;
+        #endregion
+}
+
+public static class EnhedstyperExtensions
+{
+    public static string GetEnumMemberValue(this Organisation.Enhedstyper value)
+    {
+        var member = typeof(Organisation.Enhedstyper).GetMember(value.ToString())
+                                                     .FirstOrDefault();
+
+        var attr = member?.GetCustomAttributes(typeof(EnumMemberAttribute), false)
+                          .Cast<EnumMemberAttribute>()
+                          .FirstOrDefault();
+
+        return attr?.Value ?? value.ToString();
+    }
+}
