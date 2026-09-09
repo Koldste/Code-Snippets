@@ -1,3 +1,8 @@
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
+
+namespace ProjectX.Models;
+
 /// <summary>
 ///     Interface for entities that support soft deletion functionality.
 ///     Soft-deleted entities are logically deleted (hidden from queries/automatically filtered) but remain in the database, 
@@ -25,22 +30,27 @@ public abstract class SoftDeletableBase
     /// <summary>
     /// Computed property that indicates whether <see cref="SoftDeletedOnUtc"/> has a value, i.e., whether the record is currently marked as deleted (Soft or hard).
     /// </summary>
+    /// <remarks>
+    /// Not mapped and therefore not persisted in the database. It is computed based on the values of <see cref="SoftDeletedOnUtc"/> and <see cref="HardDelete"/> and can not be used in LINQ queries. 
+    /// Use <see cref="SoftDeletedOnUtc"/> and <see cref="HardDelete"/> directly in queries instead.
+    /// </remarks>
     [NotMapped]
-    [JsonIgnore]
     public bool IsDeleted { get { return SoftDeletedOnUtc.HasValue || HardDelete; } }
 
     /// <summary>
     ///   Computed property that indicates whether the record is currently marked as soft-deleted (i.e., <see cref="SoftDeletedOnUtc"/> has a value and <see cref="HardDelete"/> is false).
     /// </summary>
+    /// <remarks>
+    /// Not mapped and therefore not persisted in the database. It is computed based on the values of <see cref="SoftDeletedOnUtc"/> and <see cref="HardDelete"/> and can not be used in LINQ queries. 
+    /// Use <see cref="SoftDeletedOnUtc"/> and <see cref="HardDelete"/> directly in queries instead.
+    /// </remarks>
     [NotMapped]
-    [JsonIgnore]
     public bool IsSoftDeleted { get { return SoftDeletedOnUtc.HasValue && !HardDelete; } }
 
     /// <summary>
     /// Gets or sets a value indicating whether this record should be hard-deleted (permanently removed from the database) instead of soft-deleted.
     /// Set this to true before calling <see cref="Microsoft.EntityFrameworkCore.DbContext.Remove{TEntity}(TEntity)"/> to indicate that the record should be permanently deleted instead of just soft-deleted.
     /// </summary>
-    [JsonIgnore]
     [NotMapped]
     public bool HardDelete { get; set; } = false;
 
@@ -52,11 +62,10 @@ public abstract class SoftDeletableBase
     ///     If the user is later subscribed to FMK, this property should be set back to <see langword="null"/>.
     /// </summary>
     /// <remarks>
-    /// Do not use a setter. Use the provided methods <see cref="MarkAsNotDeleted"/> instead or <see cref="MarkAsSoftDeleted(DateTime)"/> to set this property.
+    /// Do not use a setter. Use the provided methods <see cref="MarkAsNotDeleted"/> instead.
     /// To delete a record, call <see cref="Microsoft.EntityFrameworkCore.DbContext.Remove{TEntity}(TEntity)"/> instead, which sets this property to the current UTC time and filters it out of any get queries. 
     /// To restore a record, call <see cref="MarkAsNotDeleted"/>, which sets this property back to <see langword="null"/>.
     /// </remarks>
-    [JsonIgnore]
     public DateTime? SoftDeletedOnUtc { get; private set; }
 
     /// <summary>
@@ -74,6 +83,12 @@ public abstract class SoftDeletableBase
     /// <summary>
     ///  Marks the record as soft-deleted by setting <see cref="SoftDeletedOnUtc"/> to the provided UTC time and <see cref="HardDelete"/> to false.
     /// </summary>
+    /// <remarks>
+    /// Do not use this method to delete a record. Use <see cref="Microsoft.EntityFrameworkCore.DbContext.Remove{TEntity}(TEntity)"/> instead, 
+    /// which sets this property to the current UTC time and filters it out of any get queries.
+    /// <see cref="ProjectX.Logic.EF_Interceptors.SoftDelete.SoftDeleteInterceptor"/>.
+    /// This is only kept for legacy reasons, and should not be used in new code.
+    /// </remarks>
     /// <param name="utcNow"></param>
     public void MarkAsSoftDeleted(DateTime utcNow)
     {
